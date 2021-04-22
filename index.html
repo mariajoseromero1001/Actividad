@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrada</title>
+    <link rel="stylesheet" href="./bootstrap-4.6.0-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="./estilos.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-9 col-xl-9">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center bg-dark">
+                        Discoteca
+                          
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Nombre</label>
+                                <input type="text" class="form-control" id="nombre">
+                            
+                            </div>
+                            <div class="form-group">
+                                <label for="genero">Genero</label>
+                                <select class="form-control" id="genero">
+                                <option value="mujer">Mujer</option>
+                                <option value="hombre">Hombre</option>
+                              </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="edad">Edad</label>
+                                <input type="number" class="form-control" id="edad">
+                            </div>
+                            <button type="submit" class="btn btn-info" onclick="Enviar()">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <script>
+
+
+
+          function Enviar() {
+           let name = document.getElementById('nombre').value
+           let genero = document.getElementById('genero').value
+           let edad = document.getElementById('edad').value
+           
+           if(edad<"18"){
+                alert("No puedes ingresar, eres menor de Edad.")
+            }else{
+                alert("Puedes ingresar.")
+
+                if(genero=="mujer"){
+                    alert("Debes pagar $15.000")
+                }else{
+                   alert("Debes pagar $30.000")
+                }   
+            }
+        }
+         
+
+
+
+
+    </script>
+    
+    <script src="./Js/jquery.min.3.6.js"></script>
+ <script src="./bootstrap-4.6/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
